@@ -1,0 +1,20 @@
+{% extends "app1/base.html"%}
+{% block content %}
+
+<div class="content-section">
+        Welcome {{ name }}
+
+    {% if perms.app1.delete_blog %}
+        <input type="button" value="Delete"><br>
+    {% else %}
+        <h3>No permission given </h3>
+    {% endif %}
+
+    {% if perms.app1.add_blog %}
+        <input type="button" value="Add"><br>
+    {% else %}
+        <h3>No permission given </h3>
+    {% endif %}
+
+   </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "app1/base.html"%}
+{% load static %}
+{% block content %}
+ <h1 class="content">LIST VIEW PAGEEE...</h1>
+<hr />
+<div class="main">
+
+	{% for data in dataset %}.
+
+	{{ data.title }}<br/>
+	{{ data.desc }}<br/>
+	<hr/>
+
+	{% endfor %}
+
+</div>
+
+
+{% endblock content %}
+
+
+
